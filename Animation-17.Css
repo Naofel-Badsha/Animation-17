@@ -1,0 +1,366 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+    border: none;
+    outline: none;
+}
+
+:root{
+    --red: #ff004f;
+}
+
+*::selection{
+    background: var(--red);
+    color: #fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+section{
+    padding: 2rem 8%;
+}
+
+/*-----------Header---------Section-----------Start-----------*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 2rem 9%;
+    box-shadow: 0.5rem 1rem  #2e2d2d1a;
+    z-index: 1000;
+}
+
+header .logo{
+    font-size: 2.5rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #25a244;
+    text-decoration: none;
+}
+
+header .logo i{
+    padding: .5rem;
+    color: var(--red);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-left: 2rem;
+    color: #25a244;
+    text-decoration: none;
+    transition: 0l.2s;
+}
+
+header .navbar a:hover{
+    color: var(--red);
+}
+
+#menu-bar{
+    font-size: 3rem;
+    cursor: pointer;
+    color: #666;
+    border: .1rem solid #666;
+    border-radius: .3rem;
+    padding: .5rem 1.5rem;
+    display: none;
+}
+
+.heading{
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: sans-serif;
+    padding: 4rem;
+    color: #25a244;
+}
+
+.heading span{
+    color: #ff004f;  
+}
+/*-----------Header---------Section-----------End-----------*/
+
+html, .Home{
+    height: 100%;
+    margin: 0;
+    background: #000;
+}
+
+.all{
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    background: #000;
+    box-shadow: 
+    15px 15px 4px 1px darkcyan,
+    -15px 15px 4px 1px darkmagenta,
+    15px -15px 4px 1px darkorange,
+    -15px -15px 4px 1px firebrick,
+
+    30px 30px 4px 1px darkorchid,
+    -30px 30px 4px 1px palegreen,
+    30px -30px 4px 1px cyan,
+    -30px -30px 4px 1px violet,
+
+    45px 45px 4px 1px green,
+    -45px 45px 4px 1px hotpink,
+    45px -45px 4px 1px sandybrown,
+    -45px -45px 4px 1px mediumaquamarine,
+
+    60px 0px 4px 1px rebeccapurple,
+    -60px 0px 4px 1px salmon,
+    0px 60px 4px 1px thistle,
+    0px -60px 4px 1px dodgerblue;
+}
+
+/*------------One----------------*/
+.one{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+}
+.one-top{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    margin-top: -210px;
+}
+.one-bottom{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    margin-top: 210px;
+}
+
+
+/*------------Two----------------*/
+.two{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.two-top{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -210px;
+}
+.two-top-left{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -105px;
+    margin-left: -105px;
+}
+.two-top-right{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -210px;
+    margin-top: 105px;
+    margin-left: 105px;
+}
+.two-bottom{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 210px;
+}
+.two-bottom-left{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 105px;
+    margin-left: -105px;
+}
+.two-bottom-right{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -105px;
+    margin-left: 105px;
+}
+
+
+/*------------Three----------------*/
+.three{
+    position: absolute;
+    top: 50%;
+    left: 80%; 
+}
+.three-top{
+    position: absolute;
+    top: 50%;
+    left: 80%; 
+    margin-top: -210px;
+}
+.three-bottom{
+    position: absolute;
+    top: 50%;
+    left: 80%; 
+    margin-top: 210px;
+}
+
+.one,
+.two-top,
+.two-bottom,
+.two-top-left,
+.two-bottom-right,
+.three{
+    animation: rotate_minus 4s infinite;
+}
+.one-top,
+.one-bottom,
+.two,
+.two-top-right,
+.two-bottom-left,
+.three-top,
+.three-bottom{
+    animation: rotate_plus 4s infinite; 
+}
+
+@keyframes rotate_minus {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-180deg);
+        box-shadow: 
+        75px 75px 4px 1px darkmagenta,
+        -75px 75px 4px 1px darkcyan,
+        75px -75px 4px 1px crimson,
+        -75px -75px 4px 1px blue;
+    }
+    75%{
+        transform: rotate(-270deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes rotate_plus{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+        box-shadow: 
+        75px 75px 4px 1px darkmagenta,
+        -75px 75px 4px 1px darkcyan,
+        75px -75px 4px 1px crimson,
+        -75px -75px 4px 1px blue;
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.Home{
+    width: 100%;
+    height: 100%;
+}
+
+
+.Home .title h3{  
+    color: #f7f7f7;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.Home .title h1{
+    color: #f7f7f7;
+    font-size: 30px; 
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.Home .title p{
+    color: #f7f7f7;
+    font-size: 18px; 
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+/*--------Mediea---------Screen--------Responsive---------Start--------*/
+/*-------Navebar-------Responsive--------Start-------*/
+@media screen and (max-width: 1100px){
+    html{
+        font-size: 55%;
+    } 
+    
+    header{
+        padding: 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+    
+}
+
+
+@media screen and (max-width: 900px){
+    #menu-bar{
+       display: initial;
+    }
+
+    .fa-times{
+        transform: rotate(360deg);
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #f7f7f7;
+        border-top: .4rem solid #ff004f;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); 
+    }
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        display: block;
+        border: .2rem solid rgba(0,0,0.1);
+        border-left: .5rem solid var(--red);
+        border-right: .5rem solid #25a244;
+        background: #fff;
+        text-align: center;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+    .Contact .row form .inputBox input{
+        width: 100%;
+    }
+}
+/*-------Navebar-------Responsive---------End--------*/
+
